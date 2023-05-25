@@ -1,6 +1,21 @@
 @import url(d:\IT\Portfolio-projects\plant-shop\src\styles\style-services\normalize.min.css);
 @import url(d:\IT\Portfolio-projects\plant-shop\src\styles\style-services\reset.css);
 @import url(d:\IT\Portfolio-projects\plant-shop\src\styles\style-services\fonts.css);
+.fz_14px-reg {
+  font-weight: 400;
+  font-size: .875rem;
+}
+
+.fz_14-med {
+  font-weight: 500;
+  font-size: .875rem;
+}
+
+.fz_16px-reg {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 body {
   font-family: 'CeraPro';
 }

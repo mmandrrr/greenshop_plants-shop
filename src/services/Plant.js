@@ -1,5 +1,6 @@
 export class Plant {
-    constructor(name, img, price, sale, discount, date, liked, added, cart) {
+    constructor(id, name, img, price, sale, discount, date, liked, added, cart) {
+        this.id = id;
         this.name = name;
         this.img = img;
         this.price= price;
@@ -13,5 +14,6 @@ export class Plant {
 
     addToCart = () => {
         this.cart.cart.push(this);
+        this.added = true;
     }
 }
