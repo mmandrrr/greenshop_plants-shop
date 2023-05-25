@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAP,oFAAO;AACP,OAAO,CAAP,4EAAO;AAEP,OAAO,CAAP,4EAAO;AAMP,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,SAAS;CACzB",
+    "sources": [
+        "App.scss",
+        "style-services/_variables.scss",
+        "style-services/_text-styles.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}
