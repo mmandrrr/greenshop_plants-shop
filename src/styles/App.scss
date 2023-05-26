@@ -6,7 +6,20 @@
 @import './style-services/variables';
 @import './style-services/text-styles';
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'CeraPro';
+    overflow-x: hidden;
 }
+
+.container {
+    max-width: 77.5625rem;
+    padding: 0 .9375rem;
+    margin: 0 auto;
+}
+
+
+@import '../components/Header/header';
