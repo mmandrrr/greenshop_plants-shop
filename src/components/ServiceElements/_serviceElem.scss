@@ -1,0 +1,16 @@
+.bg_green {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    padding: .625rem 1.625rem;
+    background: $green;
+    border-radius: 6px;
+    border: 2px solid $green;
+    color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        border-color: #000;
+    }
+}

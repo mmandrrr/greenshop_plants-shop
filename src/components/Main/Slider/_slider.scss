@@ -1,0 +1,74 @@
+.slider {
+    color: #3D3D3D;
+    padding-top: .75rem;
+
+    &__container {
+        background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+        overflow-x: hidden;
+        position: relative;
+
+    }
+
+    &__wrapper {
+        width: 300%;
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    &__slide {
+        padding: 4.25rem 0rem 5.3125rem 2.5rem;
+        width: 100%;
+        background: url('../assets/slider/main-bg-min.png') center right / auto no-repeat;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: .875rem;
+        line-height: 1rem;
+        margin-bottom: .4375rem;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 4.375rem;
+        line-height: 4.375rem;
+        text-transform: uppercase;
+        max-width: 33.125rem;
+        margin-bottom: .3125rem;
+        
+        span {
+            color: $green;
+        }
+    }
+
+    &__text {
+        max-width: 33.125rem;
+        line-height: 24px;
+        margin-bottom: 2.75rem;
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 1.0625rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: .5rem;
+    }
+
+    &__dot {
+        display: block;
+        border-radius: 50%;
+        width: .5rem;
+        height: .5rem;
+        background: rgba(70, 163, 88, 0.3);
+
+        &.active {
+            background-color: $green;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

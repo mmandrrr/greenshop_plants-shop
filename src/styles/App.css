@@ -32,6 +32,24 @@ body {
   margin: 0 auto;
 }
 
+.bg_green {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: .625rem 1.625rem;
+  background: #46A358;
+  border-radius: 6px;
+  border: 2px solid #46A358;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.bg_green:hover {
+  cursor: pointer;
+  border-color: #000;
+}
+
 .header {
   padding-top: 1.625rem;
 }
@@ -284,5 +302,93 @@ body {
     justify-self: end;
     margin-right: 1.25rem;
   }
+}
+
+@media (max-width: 426px) {
+  .header .header__login {
+    display: none;
+  }
+}
+
+.slider {
+  color: #3D3D3D;
+  padding-top: .75rem;
+}
+
+.slider__container {
+  background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.slider__wrapper {
+  width: 300%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.slider__slide {
+  padding: 4.25rem 0rem 5.3125rem 2.5rem;
+  width: 100%;
+  background: url("../assets/slider/main-bg-min.png") center right/auto no-repeat;
+}
+
+.slider__subtitle {
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1rem;
+  margin-bottom: .4375rem;
+}
+
+.slider__title {
+  font-weight: 900;
+  font-size: 4.375rem;
+  line-height: 4.375rem;
+  text-transform: uppercase;
+  max-width: 33.125rem;
+  margin-bottom: .3125rem;
+}
+
+.slider__title span {
+  color: #46A358;
+}
+
+.slider__text {
+  max-width: 33.125rem;
+  line-height: 24px;
+  margin-bottom: 2.75rem;
+}
+
+.slider__dots {
+  position: absolute;
+  bottom: 1.0625rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+}
+
+.slider__dot {
+  display: block;
+  border-radius: 50%;
+  width: .5rem;
+  height: .5rem;
+  background: rgba(70, 163, 88, 0.3);
+}
+
+.slider__dot.active {
+  background-color: #46A358;
+}
+
+.slider__dot:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */
