@@ -122,6 +122,7 @@
 }
 
 .mobile {
+    z-index: 2;
     opacity: 0;
     transform: translateX(-100%);
     transition: transform 0.5s ease, opacity 0.3s ease;

@@ -193,6 +193,7 @@ body {
 }
 
 .mobile {
+  z-index: 2;
   opacity: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -390,5 +391,53 @@ body {
 
 .slider__dot:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .slider__title {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    max-width: 23.125rem;
+  }
+  .slider__text {
+    max-width: 20rem;
+  }
+  .slider__slide {
+    background-position: 120%,0;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider__slide {
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 50%;
+    padding-left: 1.875rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .slider__subtitle {
+    text-align: center;
+  }
+  .slider__title {
+    text-align: center;
+  }
+  .slider__text {
+    text-align: center;
+  }
+  .slider__slide {
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=App.css.map */

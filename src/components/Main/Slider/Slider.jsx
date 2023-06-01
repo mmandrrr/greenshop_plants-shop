@@ -1,13 +1,14 @@
 import { useState } from "react";
+
 import Slide from "./Slide";
+
+import { SlideChanger } from "../../../services/slideChanger";
 
 const Slider = () => {
 
-    const [translate, setTranslate] = useState(0);
+    const [translate, setTranslate] = useState(0),
+          slider = new SlideChanger();
 
-    const changeSlide = (e) => {    
-        setTranslate(e.target.id * (100 / 3));
-    }
 
     return(
         <section className="slider">
@@ -30,9 +31,9 @@ const Slider = () => {
                     />
                 </div>
                 <div className="slider__dots">
-                    <span onClick={e => changeSlide(e)} id="0" className="slider__dot active"></span>
-                    <span onClick={e => changeSlide(e)} id="1" className="slider__dot"></span>
-                    <span onClick={e => changeSlide(e)} id="2" className="slider__dot"></span>
+                    <span onClick={e => slider.changeSlide(e,setTranslate)} id="0" className="slider__dot active"></span>
+                    <span onClick={e => slider.changeSlide(e,setTranslate)} id="1" className="slider__dot"></span>
+                    <span onClick={e => slider.changeSlide(e,setTranslate)} id="2" className="slider__dot"></span>
                 </div>
             </div>
         </section>
