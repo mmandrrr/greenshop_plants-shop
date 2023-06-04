@@ -1,5 +1,5 @@
 export class Plant {
-    constructor(id, name, img, price, sale, discount, date, liked, added, cart) {
+    constructor(id, name, img, price, sale, discount, date, liked, discountPrice, added, cart) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -8,6 +8,7 @@ export class Plant {
         this.discount = discount;
         this.date = date;
         this.liked = liked;
+        this.discountPrice = discountPrice;
         this.added = added;
         this.cart = cart;
     }

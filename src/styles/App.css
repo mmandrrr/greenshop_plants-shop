@@ -732,10 +732,18 @@ body {
   margin-bottom: .75rem;
 }
 
-.shop__svgs {
+.shop__item:hover {
+  cursor: pointer;
+}
+
+.shop__item:hover .shop__svgs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.shop__svgs {
+  display: none;
   gap: .625rem;
   position: absolute;
   bottom: 65px;

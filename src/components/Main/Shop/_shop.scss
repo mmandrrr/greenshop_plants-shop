@@ -234,10 +234,17 @@
             height: 18.75rem;
             margin-bottom: .75rem;
         }
+
+        &:hover {
+            cursor: pointer;
+            .shop__svgs {
+                display: flex;
+            }
+        }
     }
 
     &__svgs {
-        display: flex;
+        display: none;
         gap: .625rem;
         position: absolute;
         bottom: 65px;

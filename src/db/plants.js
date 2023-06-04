@@ -1,12 +1,12 @@
-import africanViolet from '../assets/products/african-violet.png';
-import aluminiumPlant from '../assets/products/aluminium-plant.png';
-import angelWingBegonia from '../assets/products/angel-wing-begonia.png';
-import barbertonDaisy from '../assets/products/barberton-daisy.png';
-import beachSpiderLily from '../assets/products/beach-spider-lily.png';
-import birdsNestFern from "../assets/products/birds-nest-fern.png";
-import blushingBromeliad from '../assets/products/blushing-bromeliad.png';
-import broadleafLadyPalm from '../assets/products/broadleaf-lady-palm.png';
-import chineseEvergreen from '../assets/products/chinese-evergreen.png';
+import africanViolet from '../assets/products/african-violet-min.png';
+import aluminiumPlant from '../assets/products/aluminum-plant-min.png';
+import angelWingBegonia from '../assets/products/angel-wing-begonia-min.png';
+import barbertonDaisy from '../assets/products/barberton-daisy-min.png';
+import beachSpiderLily from '../assets/products/beach-spider-lily-min.png';
+import birdsNestFern from "../assets/products/birds-nest-fern-min.png";
+import blushingBromeliad from '../assets/products/blushing-bromeliad-min.png';
+import broadleafLadyPalm from '../assets/products/broadleaf-lady-palm-min.png';
+import chineseEvergreen from '../assets/products/chinese-evergreen-min.png';
 
 export const plantsDb = [
     {
@@ -19,7 +19,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'Angel Wing Begonia',
@@ -31,7 +31,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'African Violet',
@@ -43,7 +43,7 @@ export const plantsDb = [
         discount: '13% OFF',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'Beach Spider Lily',
@@ -55,7 +55,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'Blushing Bromeliad',
@@ -67,7 +67,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'Aluminum Plant',
@@ -79,7 +79,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: "Bird's Nest Fern",
@@ -91,7 +91,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'Broadleaf Lady Palm',
@@ -103,7 +103,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
     {
         name: 'Chinese Evergreen',
@@ -115,7 +115,7 @@ export const plantsDb = [
         discount: '',
         date: new Date(),
         liked: false,
-        cart: false,
+        added: false,
     },
 
 ]
