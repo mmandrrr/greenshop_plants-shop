@@ -283,6 +283,7 @@
 
     &__switcher {
         justify-self: end;
+        align-self: end;
         grid-column-start: 3;
         display: flex;
         gap: .625rem;
