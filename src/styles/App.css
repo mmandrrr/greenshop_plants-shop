@@ -785,6 +785,8 @@ body {
 
 .shop__switcher {
   justify-self: end;
+  -ms-flex-item-align: end;
+      align-self: end;
   -ms-grid-column: 3;
       grid-column-start: 3;
   display: -webkit-box;

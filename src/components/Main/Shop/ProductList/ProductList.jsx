@@ -28,6 +28,9 @@ const ProductList = () => {
     },[])
 
     useEffect(() => {
+        if(document.querySelectorAll('.shop__switch-page')[0]) {
+            document.querySelectorAll('.shop__switch-page')[0].classList.add('active')
+        }
         if(plantsList.length >= 1) {
             const newList = plantsList.map(({img,name,price,id},i) => {
                 return(
