@@ -1,12 +1,13 @@
 import { setActiveItem } from '../../../../services/setActiveItem';
-import { setSort } from '../../../../services/setSort';
+import { Sort } from '../../../../services/setSort';
 import { useState } from 'react';
 
 import arrowDown from '../../../../assets/shop/arrow-down.svg';
 
-const Filters = () => {
+const Filters = ({plantsData,setPlantsData}) => {
 
-    const [activeSort, setActiveSort] = useState('Default sorting1');
+    const [activeSort, setActiveSort] = useState('Alphabet');
+    const sort = new Sort();
 
     return(
         <div className="shop__filters">
@@ -19,9 +20,15 @@ const Filters = () => {
                 Sort by: 
                 <ul className='shop__sort-list'>
                     <li className='active'>{activeSort}</li>
-                    <li onClick={e => setSort(e,setActiveSort)} data-sort='Default sorting1'>Default sorting1</li>
-                    <li onClick={e => setSort(e,setActiveSort)} data-sort='Default sorting2'>Default sorting2</li>
-                    <li onClick={e => setSort(e,setActiveSort)} data-sort='Default sorting3'>Default sorting3</li>
+                    <li 
+                        onClick={e => sort.setSortByAlphabet(e,setActiveSort,plantsData,setPlantsData)} 
+                        data-sort='Alphabet'>Alphabet</li>
+                    <li 
+                        onClick={e => sort.setSortByPrice(e,setActiveSort,plantsData,setPlantsData)} 
+                        data-sort='Price'>Price</li>
+                    <li 
+                        onClick={e => sort.setSortByDate(e,setActiveSort,plantsData,setPlantsData)} 
+                        data-sort='Date'>Date</li>
                 </ul> 
                 <img className='img' src={arrowDown} alt="arrow" />
             </div>
