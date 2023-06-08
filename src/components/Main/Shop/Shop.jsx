@@ -6,7 +6,7 @@ import Filters from './Filters/Filters';
 
 const Shop = () => {
 
-    
+    console.log('hi')
 
     return(
         <section className="shop">
