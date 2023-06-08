@@ -6,8 +6,6 @@ import Filters from './Filters/Filters';
 
 const Shop = () => {
 
-    
-
     return(
         <section className="shop">
             <div className="shop__container container">
