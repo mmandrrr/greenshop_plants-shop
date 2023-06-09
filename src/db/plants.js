@@ -243,7 +243,7 @@ export const plantsDb = [
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
-        sale: false,
+        sale: true,
         discount: '',
         date: new Date(2023,9,19),
         liked: false,

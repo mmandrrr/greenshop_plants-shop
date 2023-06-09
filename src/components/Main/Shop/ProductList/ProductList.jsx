@@ -17,7 +17,7 @@ const ProductList = ({plantsData}) => {
     const [switchList, setSwitchList] = useState([]);
     const cart = new Cart();
 
-    useEffect(() => {
+    useEffect(()  => {
         const newList = [];
         plantsData.map(({id,name,img,price,discountPrice,sale,discount,date,liked,added}) => {
             newList.push(new Plant(id,name,img,price,sale,discount,date,liked,discountPrice,added,cart));

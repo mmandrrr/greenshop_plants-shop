@@ -1,6 +1,10 @@
-import { setActiveItem } from '../../../../services/setActiveItem';
-import { Sort } from '../../../../services/setSort';
 import { useState } from 'react';
+
+import { setActiveItem } from '../../../../services/setActiveItem';
+import { Sort } from '../../../../services/setSortForPlants';
+import { Filter } from '../../../../services/setFilterForPlants';
+
+import { plantsDb } from '../../../../db/plants';
 
 import arrowDown from '../../../../assets/shop/arrow-down.svg';
 
@@ -8,13 +12,32 @@ const Filters = ({plantsData,setPlantsData}) => {
 
     const [activeSort, setActiveSort] = useState('Alphabet');
     const sort = new Sort();
+    const filter = new Filter(plantsDb);
 
     return(
         <div className="shop__filters">
             <ul className="shop__filter">
-                <li onClick={e => setActiveItem(e)} id='0' className="shop__filter-item active">All Plants</li>
-                <li onClick={e => setActiveItem(e)} id='1' className="shop__filter-item">New Arrivals</li>
-                <li onClick={e => setActiveItem(e)} id='2' className="shop__filter-item">Sale</li>
+                <li 
+                    onClick={e => {
+                        setActiveItem(e);
+                        filter.returnAll(setPlantsData)
+                    }} 
+                    id='0' 
+                    className="shop__filter-item active">All Plants</li>
+                <li 
+                    onClick={e => {
+                        setActiveItem(e);
+                        filter.setFilterByNew(setPlantsData)
+                    }} 
+                    id='1' 
+                    className="shop__filter-item">New Arrivals</li>
+                <li 
+                    onClick={e => {
+                        setActiveItem(e);
+                        filter.setFilterBySale(setPlantsData)
+                    }} 
+                    id='2' 
+                    className="shop__filter-item">Sale</li>
             </ul>
             <div className="shop__sort">
                 Sort by: 

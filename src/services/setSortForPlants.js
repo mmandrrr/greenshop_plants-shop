@@ -48,7 +48,6 @@ export class Sort {
         this.setSort(e,funcSort);
 
         const sortResult = arr.sort((a,b) => {
-            console.log(a.date);
             return a.date.getTime() > b.date.getTime() ? 1 : -1;
         })
 

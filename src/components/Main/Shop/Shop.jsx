@@ -1,9 +1,9 @@
+import { useState } from 'react';
 
 import ProductList from './ProductList/ProductList';
 import SideBar from './SideBar/SideBar';
-
 import Filters from './Filters/Filters';
-import { useState } from 'react';
+
 import { plantsDb } from '../../../db/plants';
 
 const Shop = () => {
