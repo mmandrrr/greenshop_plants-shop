@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 
 const ProductItem = ({img,name,price,id}) => {
     return(
@@ -27,4 +29,4 @@ const ProductItem = ({img,name,price,id}) => {
     )
 }
 
-export default ProductItem
+export default memo(ProductItem)

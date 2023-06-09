@@ -4,28 +4,27 @@ import ProductItem from '../ProductItem/ProductItem';
 import { Plant } from '../../../../models/Plant';
 import { Cart } from '../../../../models/Cart';
 
-import { plantsDb } from '../../../../db/plants';
 import { useEffect, useState } from 'react';
 
 import { ProductListPagination } from '../../../../services/ProductListPagination';
 
 import { setActiveItem } from '../../../../services/setActiveItem';
 
-const ProductList = () => {
+const ProductList = ({plantsData}) => {
 
     const [plantsList, setPLantsList] = useState([]);
     const [list, setList] = useState([]);
     const [switchList, setSwitchList] = useState([]);
     const cart = new Cart();
 
-    useEffect(() => {
+    useEffect(()  => {
         const newList = [];
-        plantsDb.map(({id,name,img,price,discountPrice,sale,discount,date,liked,added}) => {
+        plantsData.map(({id,name,img,price,discountPrice,sale,discount,date,liked,added}) => {
             newList.push(new Plant(id,name,img,price,sale,discount,date,liked,discountPrice,added,cart));
         })
         const pagination = new ProductListPagination(newList);  
         setPLantsList([...pagination.showNineProducts(0)]);
-    },[])
+    },[plantsData])
 
     useEffect(() => {
         if(plantsList.length >= 1) {
@@ -43,7 +42,7 @@ const ProductList = () => {
             setList([...newList])
         }
 
-        const pagination = new ProductListPagination(plantsDb);
+        const pagination = new ProductListPagination(plantsData);
         const switchList = pagination.generateSwitcher();
         if(switchList.length >= 1) {
             const newList = switchList.map((item,i) => {
