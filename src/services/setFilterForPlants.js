@@ -24,4 +24,28 @@ export class Filter {
     returnAll = (setFunc) => {
         setFunc([...this.plantsArr])
     }
+
+    setFilterBySmall = (setFunc) => {
+        const result = this.plantsArr.filter(item => {
+            return item.size === 'small';
+        })
+
+        setFunc([...result])
+    }
+
+    setFilterByMedium = (setFunc) => {
+        const result = this.plantsArr.filter(item => {
+            return item.size === 'medium';
+        })
+
+        setFunc([...result])
+    }
+
+    setFilterByLarge = (setFunc) => {
+        const result = this.plantsArr.filter(item => {
+            return item.size === 'large';
+        })
+
+        setFunc([...result])
+    }
 }

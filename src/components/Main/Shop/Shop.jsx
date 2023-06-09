@@ -13,7 +13,9 @@ const Shop = () => {
     return(
         <section className="shop">
             <div className="shop__container container">
-                <SideBar />
+                <SideBar 
+                    setPlantsData={setPlantsData}
+                />
                 <div className="shop__content">
                     <Filters 
                         plantsData={plantsData}

@@ -20,6 +20,7 @@ export const plantsDb = [
         date: new Date(2023,0,1),
         liked: false,
         added: false,
+        size: 'large',
     },
     {
         name: 'Angel Wing Begonia',
@@ -32,6 +33,7 @@ export const plantsDb = [
         date: new Date(2023,0,1),
         liked: false,
         added: false,
+        size: 'large',
     },
     {
         name: 'African Violet',
@@ -44,6 +46,7 @@ export const plantsDb = [
         date: new Date(2023,0,2),
         liked: false,
         added: false,
+        size: 'large',
     },
     {
         name: 'Beach Spider Lily',
@@ -56,6 +59,7 @@ export const plantsDb = [
         date: new Date(2023,1,1),
         liked: false,
         added: false,
+        size: 'large',
     },
     {
         name: 'Blushing Bromeliad',
@@ -68,6 +72,7 @@ export const plantsDb = [
         date: new Date(2023,0,12),
         liked: false,
         added: false,
+        size: 'large',
     },
     {
         name: 'Aluminum Plant',
@@ -80,6 +85,7 @@ export const plantsDb = [
         date: new Date(2023,0,1),
         liked: false,
         added: false,
+        size: 'large',
     },
     {
         name: "Bird's Nest Fern",
@@ -92,6 +98,7 @@ export const plantsDb = [
         date: new Date(2023,0,11),
         liked: false,
         added: false,
+        size: 'medium',
     },
     {
         name: 'Broadleaf Lady Palm',
@@ -104,6 +111,7 @@ export const plantsDb = [
         date: new Date(2023,3,1),
         liked: false,
         added: false,
+        size: 'medium',
     },
     {
         name: 'Chinese Evergreen',
@@ -116,6 +124,7 @@ export const plantsDb = [
         date: new Date(2023,10,1),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -128,6 +137,7 @@ export const plantsDb = [
         date: new Date(2023,0,8),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -140,6 +150,7 @@ export const plantsDb = [
         date: new Date(2023,2,1),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -152,6 +163,7 @@ export const plantsDb = [
         date: new Date(2023,1,9),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -164,6 +176,7 @@ export const plantsDb = [
         date: new Date(2023,10,11),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -176,6 +189,7 @@ export const plantsDb = [
         date: new Date(2023,5,18),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -188,6 +202,7 @@ export const plantsDb = [
         date: new Date(2023,10,12),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -200,6 +215,7 @@ export const plantsDb = [
         date: new Date(2023,3,18),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -212,6 +228,7 @@ export const plantsDb = [
         date: new Date(2023,5,12),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -224,6 +241,7 @@ export const plantsDb = [
         date: new Date(2023,4,21),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -236,6 +254,7 @@ export const plantsDb = [
         date: new Date(2023,6,11),
         liked: false,
         added: false,
+        size: 'small',
     },
     {
         name: 'Chinese Evergreen',
@@ -248,6 +267,7 @@ export const plantsDb = [
         date: new Date(2023,9,19),
         liked: false,
         added: false,
+        size: 'small',
     },
 
 ]

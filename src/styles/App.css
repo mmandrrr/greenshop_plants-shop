@@ -505,6 +505,11 @@ body {
   font-weight: 700;
 }
 
+.shop__sidebar-section article.active {
+  color: #46A358;
+  font-weight: 700;
+}
+
 .shop__title {
   font-weight: 700;
   font-size: 1.125rem;
@@ -724,6 +729,9 @@ body {
 
 .shop__item {
   position: relative;
+  border-top: 2px solid white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .shop__item img {
@@ -734,6 +742,7 @@ body {
 
 .shop__item:hover {
   cursor: pointer;
+  border-top: 2px solid #46A358;
 }
 
 .shop__item:hover .shop__svgs {

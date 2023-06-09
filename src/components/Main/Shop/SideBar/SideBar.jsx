@@ -4,12 +4,14 @@ import Categories from './Categories';
 import PriceSlider from './PriceSlider';
 import Sizes from './Sizes';
 
-const SideBar = () => {
+const SideBar = ({setPlantsData}) => {
     return(
         <aside className="shop__sidebar">
             <Categories />
             <PriceSlider />
-            <Sizes />
+            <Sizes 
+                setPlantsData={setPlantsData}
+            />
             <img src={sale} alt="Sale" />
         </aside>
     )

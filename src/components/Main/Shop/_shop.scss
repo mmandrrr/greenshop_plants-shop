@@ -41,6 +41,11 @@
                 color: $green;
                 font-weight: 700;
             }
+
+            &.active {
+                color: $green;
+                font-weight: 700;
+            }
         }
     }
 
@@ -228,6 +233,8 @@
 
     &__item {
         position: relative;
+        border-top: 2px solid white;
+        transition: all 0.3s ease;
 
         img {
             width: 100%;
@@ -237,6 +244,8 @@
 
         &:hover {
             cursor: pointer;
+            border-top: 2px solid $green;
+            
             .shop__svgs {
                 display: flex;
             }
