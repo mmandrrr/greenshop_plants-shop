@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import { setActiveItem } from '../../../../services/setActiveItem';
-import { Sort } from '../../../../services/setSortForPlants';
 import { Filter } from '../../../../services/setFilterForPlants';
 
 import { plantsDb } from '../../../../db/plants';
@@ -11,8 +10,7 @@ import arrowDown from '../../../../assets/shop/arrow-down.svg';
 const Filters = ({plantsData,setPlantsData}) => {
 
     const [activeSort, setActiveSort] = useState('Alphabet');
-    const sort = new Sort();
-    const filter = new Filter(plantsDb);
+    const filter = new Filter(plantsDb,plantsData);
 
     return(
         <div className="shop__filters">
@@ -44,13 +42,13 @@ const Filters = ({plantsData,setPlantsData}) => {
                 <ul className='shop__sort-list'>
                     <li className='active'>{activeSort}</li>
                     <li 
-                        onClick={e => sort.setSortByAlphabet(e,setActiveSort,plantsData,setPlantsData)} 
+                        onClick={e => filter.setSortByAlphabet(e,setActiveSort,setPlantsData)} 
                         data-sort='Alphabet'>Alphabet</li>
                     <li 
-                        onClick={e => sort.setSortByPrice(e,setActiveSort,plantsData,setPlantsData)} 
+                        onClick={e => filter.setSortByPrice(e,setActiveSort,setPlantsData)} 
                         data-sort='Price'>Price</li>
                     <li 
-                        onClick={e => sort.setSortByDate(e,setActiveSort,plantsData,setPlantsData)} 
+                        onClick={e => filter.setSortByDate(e,setActiveSort,setPlantsData)} 
                         data-sort='Date'>Date</li>
                 </ul> 
                 <img className='img' src={arrowDown} alt="arrow" />

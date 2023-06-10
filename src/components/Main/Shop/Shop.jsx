@@ -14,6 +14,7 @@ const Shop = () => {
         <section className="shop">
             <div className="shop__container container">
                 <SideBar 
+                    plantsData={plantsData}
                     setPlantsData={setPlantsData}
                 />
                 <div className="shop__content">
