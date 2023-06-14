@@ -1,0 +1,98 @@
+.care {
+    color: $text-dark;
+    padding-bottom: 8.625rem;
+
+    &__container {
+        display: grid;
+        gap: 1.75rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__post {
+        position: relative;
+        padding: 2.3125rem 1.875rem 2.875rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1.25rem;
+        background: url('../assets/plant-care/rectangle-min.png') left bottom / auto no-repeat;
+        background-color: $grey;
+    }
+
+    &__image {
+        position: absolute;
+        top: -3.25rem;
+        left: 0;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        text-align: right;
+        text-transform: uppercase;
+        max-width: 9.375rem;
+    }
+
+    &__description {
+        max-width: 18.4375rem;
+        line-height: 24px;
+        text-align: right;
+    }
+
+    .bg {
+
+        &_green {
+            display: flex;
+            gap: .3125rem;
+            align-items: center;
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .care {
+        padding-top: 100px;
+
+        &__container {
+            grid-template-columns: repeat(1, 600px);
+            justify-content: center;
+            gap: 70px;
+        }
+
+        &__image {
+            left: -3.4375rem;
+        }
+    }
+}
+
+@media(max-width:769px) {
+    .care {
+        &__container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media(max-width:510px) {
+    .care {
+        &__post {
+            align-items: center;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__description {
+            text-align: center;
+        }
+
+        &__image {
+            display: none;
+        }
+    }
+}

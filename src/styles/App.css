@@ -911,4 +911,110 @@ body {
     height: auto;
   }
 }
+
+.care {
+  color: #3D3D3D;
+  padding-bottom: 8.625rem;
+}
+
+.care__container {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.75rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.care__post {
+  position: relative;
+  padding: 2.3125rem 1.875rem 2.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 1.25rem;
+  background: url("../assets/plant-care/rectangle-min.png") left bottom/auto no-repeat;
+  background-color: #FBFBFB;
+}
+
+.care__image {
+  position: absolute;
+  top: -3.25rem;
+  left: 0;
+}
+
+.care__title {
+  font-weight: 900;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: right;
+  text-transform: uppercase;
+  max-width: 9.375rem;
+}
+
+.care__description {
+  max-width: 18.4375rem;
+  line-height: 24px;
+  text-align: right;
+}
+
+.care .bg_green {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .3125rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .care {
+    padding-top: 100px;
+  }
+  .care__container {
+    -ms-grid-columns: (600px)[1];
+        grid-template-columns: repeat(1, 600px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 70px;
+  }
+  .care__image {
+    left: -3.4375rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .care__container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 510px) {
+  .care__post {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .care__title {
+    text-align: center;
+  }
+  .care__description {
+    text-align: center;
+  }
+  .care__image {
+    display: none;
+  }
+}
 /*# sourceMappingURL=App.css.map */

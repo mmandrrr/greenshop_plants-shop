@@ -1,5 +1,6 @@
 import Slider from "./Slider/Slider";
 import Shop from "./Shop/Shop.jsx";
+import PlantCare from "./PlantCare/PlantCare";
 
 
 const Main = () => {
@@ -7,6 +8,7 @@ const Main = () => {
         <main className="main">
             <Slider />
             <Shop />
+            <PlantCare />
         </main>
     )
 }
