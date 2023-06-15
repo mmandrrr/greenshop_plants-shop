@@ -4,7 +4,7 @@ import Post from './Post/Post';
 
 const PlantCare = () => {
     return(
-        <section className="care">
+        <section id='care' className="care">
             <div className="care__container container">
                 <Post 
                     img={summer}

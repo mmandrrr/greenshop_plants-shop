@@ -11,7 +11,7 @@ const Shop = () => {
     const [plantsData, setPlantsData] = useState(plantsDb);
 
     return(
-        <section className="shop">
+        <section id='shop' className="shop">
             <div className="shop__container container">
                 <SideBar 
                     plantsData={plantsData}

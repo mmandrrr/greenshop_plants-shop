@@ -11,7 +11,7 @@ const Slider = () => {
 
 
     return(
-        <section className="slider">
+        <section id="slider" className="slider">
             <div className="slider__container container">
                 <div style={{transform: `translateX(-${translate}%)`}} className="slider__wrapper">
                     <Slide 
