@@ -8,9 +8,11 @@ const Slide = ({subtitle, title, text}) => {
             <p className="slider__text fz_14px-reg">
                 {text}
             </p>
-            <Button 
-                text='SHOP NOW'
-            />
+            <a href="#shop">
+                <Button 
+                    text='SHOP NOW'
+                />
+            </a>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import MobileMenu from './components/MobileMenu/MobileMenu';
 import { openMobile, closeMobile } from './services/mobile';
 
 import './styles/App.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   )
