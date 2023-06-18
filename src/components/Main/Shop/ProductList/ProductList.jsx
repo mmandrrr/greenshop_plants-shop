@@ -53,7 +53,7 @@ const ProductList = ({plantsData}) => {
                     }} 
                         id={item} 
                         key={i} 
-                        className="shop__switch-page">{item + 1}</div>
+                        className={`${i === 0 ? 'shop__switch-page active' : 'shop__switch-page'}`}>{item + 1}</div>
                 )
             })
             setSwitchList([...newList]);
