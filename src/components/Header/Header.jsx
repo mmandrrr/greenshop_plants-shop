@@ -1,25 +1,62 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import logo from '../../assets/header/logo.svg';
 import Burger from '../MobileMenu/Burger';
 import Actions from './Actions/Actions';
 
-const Header = ({openMobile}) => {
+import { scrollToElement } from '../../services/scrollToElement';
+
+const Header = ({openMobile,cartArr}) => {
+
+    const [scroll, setScroll] = useState('header');
+
+    useEffect(() => {
+        scrollToElement(scroll)
+    },[scroll])
 
     return(
         <header id="header" className="header">
             <div className="header__container container">
-                <a href="#header" className="header__logo"><img src={logo} alt="Logo" /></a>
+                <Link 
+                    onClick={() => setScroll('header')}
+                    to="/" 
+                    className="header__logo"
+                ><img src={logo} alt="Logo" /></Link>
                 <nav className="header__menu">
                     <ul className="header__list">
-                        <li className="header__item"><a href="#slider" className="header__link">Home</a></li>
-                        <li className="header__item"><a href="#shop" className="header__link">Shop</a></li>
-                        <li className="header__item"><a href="#care" className="header__link">Plant Care</a></li>
-                        <li className="header__item"><a href="#blog" className="header__link">Blogs</a></li>
+                        <li 
+                            onClick={() => setScroll('slider')}
+                            className="header__item"
+                        >
+                            <Link to="/" className="header__link">Home</Link>
+                        </li>
+                        <li 
+                            onClick={() => setScroll('shop')}
+                            className="header__item"
+                        >
+                            <Link to="/" className="header__link">Shop</Link>
+                        </li>
+                        <li 
+                            onClick={() => setScroll('care')}
+                            className="header__item"
+                        >
+                            <Link to="/" className="header__link">Plant Care</Link>
+                        </li>
+                        <li 
+                            onClick={() => setScroll('blog')}
+                            className="header__item"
+                        >
+                            <Link to="/" className="header__link">Blogs</Link>
+                        </li>
                     </ul>
                 </nav>
                 <Burger 
                     openMobile={openMobile}
                 />
-                <Actions />
+                <Actions 
+                    cartArr={cartArr}
+                />
             </div>
         </header>
     )

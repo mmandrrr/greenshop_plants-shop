@@ -42,7 +42,7 @@ const Footer = () => {
                         <h3 className="footer__title">
                             Would you like to join newsletters?
                         </h3>
-                        <form className="footer__form">
+                        <form className="footer__form contact__form">
                             <input type="email" name="email" placeholder="enter your email address..." />
                             <input type="button" value="Join" />
                         </form>

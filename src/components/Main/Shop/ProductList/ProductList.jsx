@@ -2,7 +2,6 @@
 import ProductItem from '../ProductItem/ProductItem';
 
 import { Plant } from '../../../../models/Plant';
-import { Cart } from '../../../../models/Cart';
 
 import { useEffect, useState } from 'react';
 
@@ -10,12 +9,11 @@ import { ProductListPagination } from '../../../../services/ProductListPaginatio
 
 import { setActiveItem } from '../../../../services/setActiveItem';
 
-const ProductList = ({plantsData}) => {
+const ProductList = ({plantsData,cartArr,setCartArr,cart}) => {
 
     const [plantsList, setPLantsList] = useState([]);
     const [list, setList] = useState([]);
     const [switchList, setSwitchList] = useState([]);
-    const cart = new Cart();
 
     useEffect(()  => {
         const newList = [];
@@ -28,14 +26,17 @@ const ProductList = ({plantsData}) => {
 
     useEffect(() => {
         if(plantsList.length >= 1) {
-            const newList = plantsList.map(({img,name,price,id},i) => {
+            const newList = plantsList.map(({img,name,price,id,addToCart},i) => {
                 return(
                     <ProductItem 
                         key={i}
                         img={img}
                         name={name}
                         price={price}
-                        id={id}
+                        id={id}     
+                        addToCart={addToCart} 
+                        cartArr={cartArr}
+                        setCartArr={setCartArr}                  
                     />
                 )
             });

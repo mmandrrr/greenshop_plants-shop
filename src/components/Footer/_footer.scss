@@ -53,41 +53,6 @@
         }
     }
 
-    &__form {
-        display: flex;
-        margin-bottom: 1.0625rem;
-
-        input {
-            &:first-child {
-                padding: .75rem .6875rem ;
-                height: 2.5rem;
-                flex: auto;
-
-                &::placeholder {
-                    font-weight: 400;
-                    font-size: .875rem;
-                    line-height: 1rem;
-                    color: #ACACAC;
-                }
-            }
-
-            &:last-child {
-                background-color: $green;
-                border: none;
-                color: #fff;
-                padding: .75rem 1.625rem;
-                height: 2.5rem;
-                border: 1px solid $green;
-                transition: all 0.3s ease;
-
-                &:hover {
-                    cursor: pointer;
-                    border: 1px solid #000;
-                }
-            }
-        }
-    }
-
     &__contacts {
         display: flex;
         padding: 1.4375rem 1.75rem;
@@ -190,6 +155,42 @@
         font-weight: 400;
         font-size: .875rem;
         line-height: 1.875rem;
+    }
+}
+
+.contact__form {
+    display: flex;
+    margin-bottom: 1.0625rem;
+
+    input {
+        &:first-child {
+            padding: .75rem .6875rem ;
+            height: 2.5rem;
+            flex: auto;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: .875rem;
+                line-height: 1rem;
+                color: #ACACAC;
+            }
+        }
+
+        &:last-child {
+            background-color: $green;
+            border: none;
+            color: #fff;
+            padding: 0rem 1.625rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            border: 1px solid $green;
+            transition: all 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+                border: 1px solid #000;
+            }
+        }
     }
 }
 

@@ -5,20 +5,27 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 
+import { Cart } from './models/Cart';
 import { openMobile, closeMobile } from './services/mobile';
 
 import './styles/App.css';
 import Footer from './components/Footer/Footer';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 
 function App() {
 
   const [mobile, setMobile] = useState('mobile');
+  const cart = new Cart();
+  const [cartArr, setCartArr] = useState(cart.cart);
 
+  console.log(cartArr);
+  
   return (
     <>
       <Router>
         <Header 
           openMobile={() => openMobile('mobile open', setMobile)}
+          cartArr={cartArr}
         />
         <MobileMenu 
           mobile={mobile}
@@ -26,7 +33,15 @@ function App() {
         />
 
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<Main 
+            cartArr = {cartArr}
+            setCartArr={setCartArr}
+            cart={cart}
+          />} />
+          <Route path='/cart' element={<ShoppingCart 
+              cartArr={cartArr}
+              setCartArr={setCartArr}
+          />} />
         </Routes>
         <Footer />
       </Router>

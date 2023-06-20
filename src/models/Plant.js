@@ -17,4 +17,10 @@ export class Plant {
         this.cart.cart.push(this);
         this.added = true;
     }
+
+    removeFromCart = () => {
+        this.cart.cart.splice(this.cart.cart.indexOf(this),1);
+        this.added = false;
+        return this.cart.cart
+    }
 }

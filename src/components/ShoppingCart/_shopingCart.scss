@@ -1,0 +1,222 @@
+.cart {
+    padding-top: 2.25rem;
+    color: $text-dark;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 3.125rem;
+    }
+
+    &__navigation {
+        a {
+            text-decoration: none;
+            font-size: .9375rem;
+            line-height: 1rem;
+            color: $text-dark;
+
+            &:first-child {
+                font-weight: 700;
+                color: $text-dark;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 5.3125rem;
+    }
+
+    &__product-list {
+        width: 48.875rem;
+    }
+
+    &__titles {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr 1fr 1fr;
+        padding-bottom: .6875rem;
+        margin-bottom: .6875rem;
+        border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+    }
+
+    &__list-title {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr 1fr 1fr;
+        grid-template-rows: 4.375rem;
+        align-items: center;
+        background-color: $grey;
+        height: 4.375rem;
+        margin-bottom: .625rem;
+    }
+    
+    &__item-gen-info {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        img {
+            height: 100%;
+            margin-right: .875rem;
+        }
+    }
+
+    &__item-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 8rem;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1rem;
+
+        p {
+            display: flex;
+            font-weight: 400;
+            font-size: .875rem;
+            line-height: 1rem;
+
+            span {
+                color: #A5A5A5;
+            }
+        }
+    }
+
+    &__item-price {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    &__item-quantity {
+        display: flex;
+        align-items: center;
+        gap: .6875rem;
+    }
+
+    &__item-decrease, &__item-increase {
+        border: none;
+        color: #fff;
+        width: 1.375rem;
+        height: 1.375rem;
+        background: linear-gradient(180deg, #46A358 0%, rgba(70, 163, 88, 0.8) 100%);
+        border-radius: 29px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__item-total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: $green;
+
+        img {
+            margin-right: 1.25rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__totals {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5.4375rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1rem;
+        padding-bottom: .6875rem;
+        border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+        margin-bottom: .6875rem;
+    }
+
+    &__form {
+        flex-direction: column;
+        gap: .5rem;
+
+        label {
+            font-weight: 400;
+            font-size: .875rem;
+            line-height: 1rem;
+        }
+
+        div {
+            display: flex;
+        }
+    }
+
+    &__totals-item {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1rem;
+        margin-bottom: .9375rem;
+
+        span {
+            font-weight: 400;
+            font-size: .9375rem;
+            line-height: 1rem;
+        }
+    }
+
+    &__shipping-value {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        gap: .5rem;
+
+        span {
+            font-weight: 400;
+            font-size: .75rem;
+            line-height: 1rem;
+            color: $green;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__discount {
+        font-weight: 400;
+        font-size: .9375rem;
+        line-height: 1rem;
+    }
+
+    &__price {
+        color: $green;
+        span {
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1rem;
+            color: $text-dark;
+        }
+    }
+
+    &__continue {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: .875rem 0rem;
+        text-decoration: none;
+        color: $green;
+        font-weight: 400;
+        font-size: .9375rem;
+        line-height: 1rem;
+    }
+}
