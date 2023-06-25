@@ -1,28 +1,22 @@
 
 import ProductItem from '../ProductItem/ProductItem';
 
-import { Plant } from '../../../../models/Plant';
-
 import { useEffect, useState,useMemo } from 'react';
 
 import { ProductListPagination } from '../../../../services/ProductListPagination';
 
 import { setActiveItem } from '../../../../services/setActiveItem';
 
-const ProductList = ({plantsData,cartArr,setCartArr}) => {
+const ProductList = ({cartArr,setCartArr,productsList}) => {
 
     const [plantsList, setPLantsList] = useState([]);
     const [list, setList] = useState([]);
     const [switchList, setSwitchList] = useState([]);
 
     useEffect(()  => {
-        const newList = [];
-        plantsData.map(({id,name,img,price,discountPrice,sale,discount,date,liked,added}) => {
-            newList.push(new Plant(id,name,img,price,sale,discount,date,liked,discountPrice,added,cartArr));
-        })
-        const pagination = new ProductListPagination(newList);  
+        const pagination = new ProductListPagination(productsList);  
         setPLantsList([...pagination.showNineProducts(0)]);
-    },[plantsData])
+    },[productsList])
 
     useEffect(() => {
         if(plantsList.length >= 1) {
@@ -43,11 +37,7 @@ const ProductList = ({plantsData,cartArr,setCartArr}) => {
             setList([...newList])
         }
 
-        const newList = [];
-        plantsData.map(({id,name,img,price,discountPrice,sale,discount,date,liked,added}) => {
-            newList.push(new Plant(id,name,img,price,sale,discount,date,liked,discountPrice,added,cartArr));
-        })
-        const pagination = new ProductListPagination(newList);
+        const pagination = new ProductListPagination(productsList);
         const switchList = pagination.generateSwitcher();
         if(switchList.length >= 1) {
             const newList = switchList.map((item,i) => {

@@ -15,7 +15,7 @@ export class Plant {
     }
 
     addToCart = () => {
-        if(this.quantity === 0 && !Boolean(this.cart.filter(item => item.id === this.id).join())) {
+        if(!this.added) {
             this.cart.push(this);
             this.added = true;
             this.increaseQuantity();

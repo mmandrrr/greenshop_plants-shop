@@ -9,6 +9,8 @@ const ShoppingCart = ({cartArr,setCartArr}) => {
     const [products, setProducts] = useState([]);
     const [quantityChanged, setQuantityChanged] = useState({});
 
+    console.log(cartArr);
+
     useEffect(() => {
         const newList = cartArr.map(({id,img,name,price,quantity,increaseQuantity,decreaseQuantity,removeFromCart}) => {
             return(

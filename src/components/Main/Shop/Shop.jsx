@@ -1,14 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import ProductList from './ProductList/ProductList';
 import SideBar from './SideBar/SideBar';
 import Filters from './Filters/Filters';
 
-import { plantsDb } from '../../../db/plants';
-
-const Shop = ({cartArr,setCartArr}) => {
-
-    const [plantsData, setPlantsData] = useState(plantsDb);
+const Shop = ({cartArr,setCartArr,plantsData,setPlantsData,productsList}) => {
 
     return(
         <section id='shop' className="shop">
@@ -24,6 +20,7 @@ const Shop = ({cartArr,setCartArr}) => {
                     />
                     <ProductList 
                         plantsData={plantsData}
+                        productsList={productsList}
                         cartArr={cartArr}
                         setCartArr={setCartArr}
                     />
