@@ -128,7 +128,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '10',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -141,7 +141,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '11',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -154,7 +154,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '12',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -167,7 +167,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '13',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -180,7 +180,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '14',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -193,7 +193,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '15',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -206,7 +206,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '16',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -219,7 +219,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '17',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -232,7 +232,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '18',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -245,7 +245,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '19',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',
@@ -258,7 +258,7 @@ export const plantsDb = [
     },
     {
         name: 'Chinese Evergreen',
-        id: '9',
+        id: '20',
         img: chineseEvergreen,
         price: '$39.00',
         discountPrice: '',

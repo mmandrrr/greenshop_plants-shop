@@ -11,16 +11,38 @@ export class Plant {
         this.discountPrice = discountPrice;
         this.added = added;
         this.cart = cart;
+        this.quantity = 0;
     }
 
     addToCart = () => {
-        this.cart.cart.push(this);
-        this.added = true;
+        if(this.quantity === 0 && !Boolean(this.cart.filter(item => item.id === this.id).join())) {
+            this.cart.push(this);
+            this.added = true;
+            this.increaseQuantity();
+        } else {
+            this.increaseQuantity();
+        }
+        return this.cart;
+    }
+
+    increaseQuantity = () => {
+        this.quantity += 1;
+        return this.quantity
+    }
+
+    decreaseQuantity = () => {
+        this.quantity -= 1;
+        return this.quantity
     }
 
     removeFromCart = () => {
-        this.cart.cart.splice(this.cart.cart.indexOf(this),1);
+        const index = this.cart.findIndex(item => item.id === this.id);
+        this.cart.splice(index,1);
         this.added = false;
-        return this.cart.cart
+        return this.cart
+    }
+
+    updateCart = (cart) => {
+        this.cart = cart;
     }
 }

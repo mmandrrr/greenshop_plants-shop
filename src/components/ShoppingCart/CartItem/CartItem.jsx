@@ -1,22 +1,28 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import deleteIcon from '../../../assets/shopping-cart/delete.svg';
 
-const CartItem = ({name,img,price,setCartArr,removeFromCart,cartArr}) => {
-    const [quantity, setQuantity] = useState(1);
+const CartItem = ({name,img,price,quantity,increaseQuantity,decreaseQuantity,setCartArr,removeFromCart,setQuantityChanged}) => {
+    const [itemQuantity, setItemQuantity] = useState(1);
+
+    useEffect(() => {
+        setItemQuantity(quantity)
+    },[])
 
     const removeItem = () => {
         const newCart = removeFromCart()
         setCartArr([...newCart])
     }
 
-    const increaseQuantity = () => {
-        setQuantity(quantity + 1)
+    const increaseItemQuantity = () => {
+        setItemQuantity(increaseQuantity())
+        setQuantityChanged({});
     }
 
-    const decreaseQuantity = () => {
-        if(quantity > 1) {
-            setQuantity(quantity - 1)
+    const decreaseItemQuantity = () => {
+        if(itemQuantity > 1) {
+            setItemQuantity(decreaseQuantity())
+            setQuantityChanged({});
         } else {
             removeItem()
         }
@@ -35,12 +41,12 @@ const CartItem = ({name,img,price,setCartArr,removeFromCart,cartArr}) => {
                 {price}
             </div>
             <div className="cart__item-quantity">
-                <button onClick={decreaseQuantity} className="cart__item-decrease">-</button>
-                {quantity}
-                <button onClick={increaseQuantity} className="cart__item-increase">+</button>
+                <button onClick={decreaseItemQuantity} className="cart__item-decrease">-</button>
+                {itemQuantity}
+                <button onClick={increaseItemQuantity} className="cart__item-increase">+</button>
             </div>
             <div className="cart__item-total">
-                ${quantity * price.split('$')[1]}.00
+                ${itemQuantity * price.split('$')[1]}.00
                 <img onClick={removeItem} src={deleteIcon} alt="Delete" />
             </div>
         </div>

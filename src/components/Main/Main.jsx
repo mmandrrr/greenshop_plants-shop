@@ -4,14 +4,13 @@ import PlantCare from "./PlantCare/PlantCare";
 import Blog from "./Blog/Blog";
 
 
-const Main = ({cartArr,setCartArr,cart}) => {
+const Main = ({cartArr,setCartArr}) => {
     return(
         <main className="main">
             <Slider />
             <Shop 
                 cartArr={cartArr}
                 setCartArr={setCartArr}
-                cart={cart}
             />
             <PlantCare />
             <Blog />

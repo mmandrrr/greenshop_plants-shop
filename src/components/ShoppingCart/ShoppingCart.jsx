@@ -2,22 +2,28 @@ import { Link } from "react-router-dom";
 
 import CartItem from "./CartItem/CartItem";
 import Totals from "./Totals/Totals";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ShoppingCart = ({cartArr,setCartArr}) => {
 
     const [products, setProducts] = useState([]);
-    useState(() => {
-        const newList = cartArr.map(({img,name,price,removeFromCart},i) => {
+    const [quantityChanged, setQuantityChanged] = useState({});
+
+    useEffect(() => {
+        const newList = cartArr.map(({id,img,name,price,quantity,increaseQuantity,decreaseQuantity,removeFromCart}) => {
             return(
                 <CartItem 
-                    key={i}
+                    key={id}
                     img={img}
                     name={name}
                     price={price}
+                    quantity={quantity}
+                    increaseQuantity={increaseQuantity}
+                    decreaseQuantity={decreaseQuantity}
                     setCartArr={setCartArr}
                     removeFromCart={removeFromCart}
                     cartArr={cartArr}
+                    setQuantityChanged={setQuantityChanged}
                 />
             )
         });
@@ -39,9 +45,12 @@ const ShoppingCart = ({cartArr,setCartArr}) => {
                             <h4 className="cart__list-title">Quantity</h4>
                             <h4 className="cart__list-title">Total</h4>
                         </div>
-                        {products}
+                        {cartArr.length >= 1 ? products : <p style={{textAlign: 'center', marginTop: '20px'}}>It's empty...</p>}
                     </div>
-                    <Totals />
+                    <Totals 
+                        cartArr={cartArr}
+                        quantityChanged={quantityChanged}
+                    />
                 </div>
             </div>
         </section>

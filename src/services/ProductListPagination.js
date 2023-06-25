@@ -21,7 +21,6 @@ export class ProductListPagination {
             switchId.push(i);
         }
 
-
         return switchId;
     }
 }

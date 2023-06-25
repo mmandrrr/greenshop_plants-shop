@@ -1,11 +1,11 @@
 import { memo } from 'react';
 
 
-const ProductItem = ({img,name,price,id,addToCart,cartArr,setCartArr}) => {
+const ProductItem = ({img,name,price,id,addToCart,setCartArr}) => {
 
     const addProduct = () => {
-        addToCart()
-        setCartArr([...cartArr]);
+        const newArr = addToCart();
+        setCartArr([...newArr]);
     }
 
     return(

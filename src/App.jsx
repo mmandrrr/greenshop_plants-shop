@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
@@ -13,13 +13,14 @@ import Footer from './components/Footer/Footer';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 
 function App() {
-
   const [mobile, setMobile] = useState('mobile');
-  const cart = new Cart();
-  const [cartArr, setCartArr] = useState(cart.cart);
-
-  console.log(cartArr);
+  const [cartArr, setCartArr] = useState([]);
   
+  useEffect(() => {
+    const cart = new Cart();
+    setCartArr([...cart.cart]);
+  },[])
+
   return (
     <>
       <Router>
@@ -36,7 +37,6 @@ function App() {
           <Route path='/' element={<Main 
             cartArr = {cartArr}
             setCartArr={setCartArr}
-            cart={cart}
           />} />
           <Route path='/cart' element={<ShoppingCart 
               cartArr={cartArr}

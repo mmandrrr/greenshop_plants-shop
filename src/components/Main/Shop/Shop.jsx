@@ -6,7 +6,7 @@ import Filters from './Filters/Filters';
 
 import { plantsDb } from '../../../db/plants';
 
-const Shop = ({cartArr,setCartArr,cart}) => {
+const Shop = ({cartArr,setCartArr}) => {
 
     const [plantsData, setPlantsData] = useState(plantsDb);
 
@@ -26,7 +26,6 @@ const Shop = ({cartArr,setCartArr,cart}) => {
                         plantsData={plantsData}
                         cartArr={cartArr}
                         setCartArr={setCartArr}
-                        cart={cart}
                     />
                 </div>
             </div>
