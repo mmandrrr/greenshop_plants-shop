@@ -35,6 +35,22 @@ const Totals = ({cartArr,quantityChanged}) => {
         calculateTotal();
     },[subTotal])
 
+    useEffect(() => {
+        switch(cartArr.length) {
+            case 0 :
+                setShipping(0);
+                break;
+            case 1 :
+                setShipping(10);
+                break;
+            case 2 : 
+                setShipping(20);
+                break;
+            default :
+                setShipping(50);
+        }
+    },[cartArr])
+
     return(
         <div className="cart__totals">
             <h2 className="cart__title">
