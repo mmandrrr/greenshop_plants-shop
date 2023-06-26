@@ -49,6 +49,10 @@ const CartItem = ({name,img,price,quantity,increaseQuantity,decreaseQuantity,set
                 ${itemQuantity * price.split('$')[1]}.00
                 <img onClick={removeItem} src={deleteIcon} alt="Delete" />
             </div>
+            <div onClick={removeItem} className="cart__close-btn">
+                <span></span>
+                <span></span>
+            </div>
         </div>
     )
 }

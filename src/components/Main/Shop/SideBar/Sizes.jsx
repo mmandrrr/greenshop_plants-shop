@@ -44,7 +44,7 @@ const Article = ({id,size,dataAttribute,filter}) => {
                 setActiveItem(e);
                 filter(e)
             }}
-            id={id}
+            data-id={id}
             data-size={dataAttribute}
             className="shop__size-article">
             {size} <span>(119)</span>

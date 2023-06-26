@@ -47,6 +47,7 @@ const ProductList = ({cartArr,setCartArr,productsList}) => {
                         setPLantsList([...pagination.showNineProducts(e.target.id)]);
                     }} 
                         id={item} 
+                        data-id={item}
                         key={i} 
                         className={`${i === 0 ? 'shop__switch-page active' : 'shop__switch-page'}`}>{item + 1}</div>
                 )

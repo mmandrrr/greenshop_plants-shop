@@ -25,6 +25,8 @@ export class Filter {
         })
 
         setFunc([...result]);
+        
+        this.paintSwithcer();
     }
 
     setFilterBySale = (setFunc) => {
@@ -35,10 +37,14 @@ export class Filter {
         })
 
         setFunc([...result]);
+
+        this.paintSwithcer();
     }
 
     returnAll = (setFunc) => {
         setFunc([...this.plantsArr])
+
+        this.paintSwithcer();
     }
 
     // Sizes Filter

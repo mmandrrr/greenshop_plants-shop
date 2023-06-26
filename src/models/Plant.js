@@ -39,6 +39,7 @@ export class Plant {
         const index = this.cart.findIndex(item => item.id === this.id);
         this.cart.splice(index,1);
         this.added = false;
+        this.quantity = 0;
         return this.cart
     }
 

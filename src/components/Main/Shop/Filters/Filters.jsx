@@ -20,21 +20,21 @@ const Filters = ({plantsData,setPlantsData}) => {
                         setActiveItem(e);
                         filter.returnAll(setPlantsData)
                     }} 
-                    id='0' 
+                    data-id='0' 
                     className="shop__filter-item active">All Plants</li>
                 <li 
                     onClick={e => {
                         setActiveItem(e);
                         filter.setFilterByNew(setPlantsData)
                     }} 
-                    id='1' 
+                    data-id='1' 
                     className="shop__filter-item">New Arrivals</li>
                 <li 
                     onClick={e => {
                         setActiveItem(e);
                         filter.setFilterBySale(setPlantsData)
                     }} 
-                    id='2' 
+                    data-id='2' 
                     className="shop__filter-item">Sale</li>
             </ul>
             <div className="shop__sort">

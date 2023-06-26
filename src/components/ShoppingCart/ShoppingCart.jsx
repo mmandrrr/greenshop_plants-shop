@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CartItem from "./CartItem/CartItem";
 import Totals from "./Totals/Totals";
 import { useEffect, useState } from "react";
+import InterestedIn from "./InterestedIn/InterestedIn";
 
 const ShoppingCart = ({cartArr,setCartArr}) => {
 
@@ -52,6 +53,7 @@ const ShoppingCart = ({cartArr,setCartArr}) => {
                         quantityChanged={quantityChanged}
                     />
                 </div>
+                <InterestedIn />
             </div>
         </section>
     )

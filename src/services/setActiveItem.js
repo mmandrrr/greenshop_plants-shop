@@ -5,5 +5,5 @@ export const setActiveItem = (e) => {
         item.classList.remove('active');
     })
 
-    item[e.target.id].classList.add('active');
+    item[e.target.dataset.id].classList.add('active');
 }
