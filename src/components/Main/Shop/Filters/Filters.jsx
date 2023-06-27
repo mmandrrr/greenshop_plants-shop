@@ -7,10 +7,10 @@ import { plantsDb } from '../../../../db/plants';
 
 import arrowDown from '../../../../assets/shop/arrow-down.svg';
 
-const Filters = ({plantsData,setPlantsData}) => {
+const Filters = ({plantsData,setPlantsData,productsList}) => {
 
     const [activeSort, setActiveSort] = useState('Alphabet');
-    const filter = new Filter(plantsDb,plantsData);
+    const filter = new Filter(productsList,plantsData);
 
     return(
         <div className="shop__filters">

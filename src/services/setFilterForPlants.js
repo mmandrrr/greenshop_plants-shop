@@ -82,7 +82,7 @@ export class Filter {
     setSortByAlphabet = (e,setSort,setArr) => {
         this.setSort(e,setSort);
 
-        const result = this.filteredArr.sort((a,b) => {
+        const result = this.plantsArr.sort((a,b) => {
             return a.name > b.name ? 1 : -1;
         })
 
@@ -95,7 +95,7 @@ export class Filter {
         this.setSort(e,setSort);
         this.filtered = true;
 
-        const result = this.filteredArr.sort((a,b) => {
+        const result = this.plantsArr.sort((a,b) => {
             return +a.price.split('$')[1] < +b.price.split('$')[1] ? 1 : -1;
         })
 
@@ -109,7 +109,7 @@ export class Filter {
 
         this.setSort(e,funcSort);
 
-        const sortResult = this.filteredArr.sort((a,b) => {
+        const sortResult = this.plantsArr.sort((a,b) => {
             return a.date.getTime() > b.date.getTime() ? 1 : -1;
         })
 

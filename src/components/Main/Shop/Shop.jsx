@@ -17,6 +17,7 @@ const Shop = ({cartArr,setCartArr,plantsData,setPlantsData,productsList}) => {
                     <Filters 
                         plantsData={plantsData}
                         setPlantsData={setPlantsData}
+                        productsList={productsList}
                     />
                     <ProductList 
                         plantsData={plantsData}
