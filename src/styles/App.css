@@ -312,8 +312,13 @@ body {
 }
 
 @media (max-width: 426px) {
-  .header .header__login {
+  .header__login {
     display: none;
+  }
+  .header__actions {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

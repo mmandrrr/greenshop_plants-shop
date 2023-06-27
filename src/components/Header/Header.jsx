@@ -12,39 +12,39 @@ const Header = ({openMobile,cartArr}) => {
     const [scroll, setScroll] = useState('header');
 
     useEffect(() => {
-        scrollToElement(scroll)
+        scrollToElement(...scroll)
     },[scroll])
 
     return(
         <header id="header" className="header">
             <div className="header__container container">
                 <Link 
-                    onClick={() => setScroll('header')}
+                    onClick={() => setScroll(['header'])}
                     to="/" 
                     className="header__logo"
                 ><img src={logo} alt="Logo" /></Link>
                 <nav className="header__menu">
                     <ul className="header__list">
                         <li 
-                            onClick={() => setScroll('slider')}
+                            onClick={() => setScroll(['slider'])}
                             className="header__item"
                         >
                             <Link to="/" className="header__link">Home</Link>
                         </li>
                         <li 
-                            onClick={() => setScroll('shop')}
+                            onClick={() => setScroll(['shop'])}
                             className="header__item"
                         >
                             <Link to="/" className="header__link">Shop</Link>
                         </li>
                         <li 
-                            onClick={() => setScroll('care')}
+                            onClick={() => setScroll(['care'])}
                             className="header__item"
                         >
                             <Link to="/" className="header__link">Plant Care</Link>
                         </li>
                         <li 
-                            onClick={() => setScroll('blog')}
+                            onClick={() => setScroll(['blog'])}
                             className="header__item"
                         >
                             <Link to="/" className="header__link">Blogs</Link>

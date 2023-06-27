@@ -216,8 +216,12 @@
 
 @media(max-width:426px) {
     .header {
-        .header__login {
+        &__login {
             display: none;
+        }
+
+        &__actions {
+            justify-content: center;
         }
     }
 }
